@@ -33,8 +33,14 @@ const readAndAppend = (content, file) => {
 const deleteFromFile = (noteId, file) => {
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) throw err;
-    data = data.filter(note => note.id != noteId);
-    writeToFile(file, JSON.stringify(data))
+    const parsedData = JSON.parse(data);
+    const idIndex = parsedData.findIndex(note => note.id === noteId);
+
+    if (idIndex > -1) {
+      parsedData.splice(idIndex, 1);
+    }
+  
+    writeToFile(file, parsedData)
   });
 }
 

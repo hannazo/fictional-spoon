@@ -28,7 +28,7 @@ app.post('/', (req, res) => {
 });
 
 // DELETE request
-app.delete('./:id', (req, res) => {
+app.delete('/:id', (req, res) => {
   console.log("req params", req.params.id);
 
   if (req.params.id) {
