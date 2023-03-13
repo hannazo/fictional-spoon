@@ -14,7 +14,7 @@ const writeToFile = (destination, content) =>
   fs.writeFile(destination, JSON.stringify(content, null, 3), (err) =>
     err ? console.error(err) : console.info(`\nData written to ${destination}`)
   );
-  
+
 /**
  *  Function to read data from a given a file and append some content
  *  @param {object} content The content that will be appended to the file. (newNote)
@@ -30,4 +30,12 @@ const readAndAppend = (content, file) => {
   });
 };
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+const deleteFromFile = (noteId, file) => {
+  fs.readFile(file, 'utf8', (err, data) => {
+    if (err) throw err;
+    data = data.filter(note => note.id != noteId);
+    writeToFile(file, JSON.stringify(data))
+  });
+}
+
+module.exports = { readFromFile, writeToFile, readAndAppend, deleteFromFile };
