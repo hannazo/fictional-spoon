@@ -1,21 +1,10 @@
-const app = require('express').Router();
+const express = require('express');
 
-app.get('/notes', (req, res) => {
-    console.log(req.body);
+// Import modular router for /notes
+const notesRouter = require('./notes');
 
-    const { title, text} = req.body;
+const app = express();
 
-    if (req.body) {
-        const newNote = {
-            title,
-            text
-        };
-
-        readAndAppend(newNote, '.db/db/json');
-        console.log(`Added new note successfully`);
-    } else {
-        console.log(err);
-    }
-});
+app.use('/notes', notesRouter);
 
 module.exports = app;
