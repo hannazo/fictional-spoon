@@ -1,6 +1,12 @@
 [
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
+   {
+      "title": "Welcome to Note Taker",
+      "text": "Note Taker can be used to write and save notes. Organize your thoughts and keep track of tasks you need to complete.",
+      "id": "a4d04c6f-ac26-4147-b615-b2509cbe57b4"
+   },
+   {
+      "title": "Note to self",
+      "text": "You are awesome!",
+      "id": "b8747e32-46c9-4568-b557-9c0ee5ef6fa0"
+   }
 ]
