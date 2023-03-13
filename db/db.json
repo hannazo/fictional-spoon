@@ -1,6 +1,7 @@
 [
-    {
-        "title": "Test Title",
-        "text": "Test text"
-    }
+   {
+      "title": "Welcome to Note Taker",
+      "text": "Test text",
+      "id": "a4d04c6f-ac26-4147-b615-b2509cbe57b4"
+   }
 ]

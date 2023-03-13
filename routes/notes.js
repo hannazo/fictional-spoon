@@ -23,7 +23,7 @@ app.post('/', (req, res) => {
     readAndAppend(newNote, './db/db.json');
     res.json(newNote);
   } else {
-    res.error('Error in saving note');
+    console.log(err);
   }
 });
 
