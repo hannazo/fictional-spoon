@@ -5,7 +5,10 @@
 ## Description
   
 Note Taker can be used to write and save notes. Organize your thoughts and keep track of tasks you need to complete.
-[Screenshot](./public/assets/images/Note%20Taker%20Screenshot.png)
+
+[Deployed Application](https://boiling-fjord-26165.herokuapp.com/)
+
+![Screenshot](./public/assets/images/Note%20Taker%20Screenshot.png)
   
 ## Table of Contents
 
@@ -21,7 +24,7 @@ To install necessary dependencies, run 'npm i' command.
   
 ## Usage
   
-Open https:// to access the Note Taker web page.
+Click on the [link](https://boiling-fjord-26165.herokuapp.com/) to access the Note Taker web page.
   
 ## License
     
